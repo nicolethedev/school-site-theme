@@ -2,6 +2,32 @@
 	"$schema": "https://schemas.wp.org/wp/6.7/theme.json",
 	"settings": {
 		"appearanceTools": true,
+		"color": {
+			"defaultPalette": false,
+			"palette": [
+				{
+					"color": "#023250",
+					"name": "Cobalt Blue",
+					"slug": "cobalt-blue"
+				},
+				{
+					"color": "#B3E3E1",
+					"name": "Mint Green",
+					"slug": "mint-green"
+				},
+				{
+					"color": "#FFC67D",
+					"name": "Bright Coral",
+					"slug": "bright-coral"
+				},
+				{
+					"color": "#F8F1E8",
+					"name": "Sandy Sand",
+					"slug": "sandy-sand"
+				}
+			]
+		},
+
 		"layout": {
 			"contentSize": "620px",
 			"wideSize": "1000px"
