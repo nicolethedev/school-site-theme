@@ -9,7 +9,7 @@
 
 function staff_taxonomy() {
     $labels = array(
-        'name'              => _x( 'Staff Groups', 'taxonomy general name' ),
+        'name'              => _x( 'Staff Type', 'taxonomy general name' ),
         'search_items'      => __( 'Search Staff Groups' ),
         'all_items'         => __( 'All Staff Groups' ),
         'parent_item'       => __( 'Parent Group' ),
@@ -36,7 +36,7 @@ function staff_taxonomy() {
         )
     );
     
-    register_taxonomy( 'staff_group', ['staff'], $args );
+    register_taxonomy( 'staff_group', ['fwd-staff'], $args );
 }
 add_action( 'init', 'staff_taxonomy' );
 
