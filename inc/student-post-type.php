@@ -32,28 +32,36 @@ function student_post_type() {
 		'filter_items_list'     => __( 'Filter Student list', 'school-site-theme' ),
 	);
 	$args = array(
-		'label'                 => __( 'Student', 'school-site-theme' ),
-		'description'           => __( 'A place to add school students', 'school-site-theme' ),
-		'labels'                => $labels,
-		'supports'              => array( 'title', 'editor', 'thumbnail' ),
-		'taxonomies'            => array( 'student' ),
-		'hierarchical'          => false,
-		'public'                => true,
-		'show_ui'               => true,
-		'show_in_menu'          => true,
-		'menu_position'         => 5,
-		'menu_icon'             => 'dashicons-smiley',
-		'show_in_admin_bar'     => true,
-		'show_in_nav_menus'     => true,
-		'can_export'            => true,
-		'has_archive'           => true,
-		'exclude_from_search'   => false,
-		'publicly_queryable'    => true,
-		'capability_type'       => 'page',
+        'label'                 => __( 'Student', 'school-site-theme' ),
+        'description'           => __( 'A place to add school students', 'school-site-theme' ),
+        'labels'                => $labels,
+        'supports'              => array( 'title', 'editor', 'thumbnail' ),
+        'taxonomies'            => array( 'student' ),
+        'hierarchical'          => false,
+        'public'                => true,
+        'show_ui'               => true,
+        'show_in_menu'          => true,
+        'menu_position'         => 5,
+        'menu_icon'             => 'dashicons-smiley',
+        'show_in_admin_bar'     => true,
+        'show_in_nav_menus'     => true,
+        'can_export'            => true,
+        'has_archive'           => true,
+        'exclude_from_search'   => false,
+        'publicly_queryable'    => true,
+        'capability_type'       => 'page',
         'show_in_rest'          => true,
         'rewrite'               => array( 'slug' => 'students' ),
-	);
-	register_post_type( 'fwd-student', $args );
-
+        'template' => array(
+            array('core/paragraph', array(
+                'placeholder' => 'Enter student biography'
+            )),
+            array('core/button', array(
+                'placeholder' => 'Add portfolio link'
+            ))
+        ),
+        'template_lock' => 'all',
+    );
+    register_post_type( 'fwd-student', $args );
 }
 add_action( 'init', 'student_post_type', 0 );

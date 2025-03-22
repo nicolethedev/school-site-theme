@@ -32,3 +32,31 @@ function student_taxonomy() {
 	 register_taxonomy( 'student', [ 'post' ], $args );
 }
 add_action( 'init', 'student_taxonomy' );
+
+function create_student_taxonomy_terms() {
+    $terms = array(
+        'Freshman' => array(
+            'description' => 'Students in their first year of high school',
+            'slug' => 'freshman'
+        ),
+        'Sophomore' => array(
+            'description' => 'Students in their second year of high school',
+            'slug' => 'sophomore'
+        ),
+        'Junior' => array(
+            'description' => 'Students in their third year of high school',
+            'slug' => 'junior'
+        ),
+        'Senior' => array(
+            'description' => 'Students in their fourth year of high school',
+            'slug' => 'senior'
+        )
+    );
+
+    foreach ($terms as $term_name => $term_args) {
+        if (!term_exists($term_name, 'student_category')) {
+            wp_insert_term($term_name, 'student_category', $term_args);
+        }
+    }
+}
+add_action( 'init', 'create_student_taxonomy_terms' );
