@@ -42,7 +42,7 @@
 
         <!-- wp:post-featured-image {"isLink":true,"aspectRatio":"1","width":"250px","height":"250px","sizeSlug":"student-thumbnail","align":"left"} /-->
 
-        <!-- wp:post-excerpt {"excerptLength":28,"style":{"spacing":{"padding":{"right":"0","left":"0"},"margin":{"right":"0","left":"0"}}}} /-->
+        <!-- wp:post-excerpt {"moreText":"Continue Reading","excerptLength":28,"style":{"spacing":{"padding":{"right":"0","left":"0"},"margin":{"right":"0","left":"0"}}}} /-->
 
         <!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"}} -->
         <div class="wp-block-group">
@@ -51,21 +51,17 @@
           <!-- wp:post-terms {"term":"category"} /-->
         </div>
         <!-- /wp:group -->
+
+        <!-- wp:spacer {"height":"32px"} -->
+        <div
+          style="height: 32px"
+          aria-hidden="true"
+          class="wp-block-spacer"
+        ></div>
+        <!-- /wp:spacer -->
       </article>
       <!-- /wp:group -->
       <!-- /wp:post-template -->
-
-      <!-- wp:group {"layout":{"inherit":true,"type":"constrained"}} -->
-      <div class="wp-block-group">
-        <!-- wp:query-pagination -->
-        <!-- wp:query-pagination-previous /-->
-
-        <!-- wp:query-pagination-numbers /-->
-
-        <!-- wp:query-pagination-next /-->
-        <!-- /wp:query-pagination -->
-      </div>
-      <!-- /wp:group -->
     </div>
     <!-- /wp:query -->
 
@@ -73,6 +69,18 @@
   </div>
   <!-- /wp:group -->
 </main>
+<!-- /wp:group -->
+
+<!-- wp:group {"layout":{"inherit":true,"type":"constrained"}} -->
+<div class="wp-block-group">
+  <!-- wp:query-pagination -->
+  <!-- wp:query-pagination-previous /-->
+
+  <!-- wp:query-pagination-numbers /-->
+
+  <!-- wp:query-pagination-next /-->
+  <!-- /wp:query-pagination -->
+</div>
 <!-- /wp:group -->
 
 <!-- wp:template-part {"slug":"footer","theme":"school-site-theme","tagName":"footer"} /-->
