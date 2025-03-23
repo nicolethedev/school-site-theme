@@ -24,6 +24,26 @@
 					"color": "#F8F1E8",
 					"name": "Sandy Sand",
 					"slug": "sandy-sand"
+				},
+				{
+					"color": "#A9362F",
+					"name": "Red Red Wine",
+					"slug": "red-red-wine"
+				},
+				{
+					"color": "#778F91",
+					"name": "Icy Blue",
+					"slug": "icy-blue"
+				},
+				{
+					"color": "#903D22",
+					"name": "Burnt Orange",
+					"slug": "burnt-orange"
+				},
+				{
+					"color": "#9A8069",
+					"name": "Taupe",
+					"slug": "taupe"
 				}
 			]
 		},
