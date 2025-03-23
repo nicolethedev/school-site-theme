@@ -1,9 +1,11 @@
 <!-- wp:template-part {"slug":"header","theme":"school-site-theme","tagName":"header"} /-->
 
-<!-- wp:cover {"url":"http://localhost/school-site/wp-content/uploads/2025/03/taylor-flowe-4nKOEAQaTgA-unsplash.jpg","id":50,"alt":"A photo looking at the front of a classroom, with the back of the head of student in the foreground.","dimRatio":60,"overlayColor":"cobalt-blue","isUserOverlayColor":true,"focalPoint":{"x":0.5,"y":0.4},"minHeight":579,"minHeightUnit":"px","style":{"spacing":{"margin":{"top":"0","bottom":"0"}}},"layout":{"type":"constrained"}} -->
+<!-- wp:block {"ref":93} /-->
+
+<!-- wp:cover {"url":"http://localhost/school-site/wp-content/uploads/2025/03/taylor-flowe-4nKOEAQaTgA-unsplash.jpg","id":50,"alt":"A photo looking at the front of a classroom, with the back of the head of student in the foreground.","dimRatio":60,"overlayColor":"cobalt-blue","isUserOverlayColor":true,"focalPoint":{"x":0.5,"y":0.4},"minHeight":729,"minHeightUnit":"px","style":{"spacing":{"margin":{"top":"0","bottom":"0"}}},"layout":{"type":"constrained"}} -->
 <div
   class="wp-block-cover"
-  style="margin-top: 0; margin-bottom: 0; min-height: 579px"
+  style="margin-top: 0; margin-bottom: 0; min-height: 729px"
 >
   <span
     aria-hidden="true"
@@ -31,13 +33,15 @@
 </div>
 <!-- /wp:cover -->
 
-<!-- wp:columns {"style":{"spacing":{"padding":{"right":"var:preset|spacing|60","left":"var:preset|spacing|60"},"blockGap":{"top":"0","left":"0"},"margin":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60"}}}} -->
+<!-- wp:columns {"style":{"spacing":{"padding":{"right":"var:preset|spacing|60","left":"var:preset|spacing|60","top":"var:preset|spacing|40","bottom":"var:preset|spacing|40"},"blockGap":{"top":"0","left":"0"},"margin":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60"}}}} -->
 <div
   class="wp-block-columns"
   style="
     margin-top: var(--wp--preset--spacing--60);
     margin-bottom: var(--wp--preset--spacing--60);
+    padding-top: var(--wp--preset--spacing--40);
     padding-right: var(--wp--preset--spacing--60);
+    padding-bottom: var(--wp--preset--spacing--40);
     padding-left: var(--wp--preset--spacing--60);
   "
 >
@@ -78,42 +82,6 @@
 </div>
 <!-- /wp:columns -->
 
-<!-- wp:media-text {"mediaId":53,"mediaLink":"http://localhost/school-site/?attachment_id=53","mediaType":"image","mediaWidth":49,"mediaSizeSlug":"large","imageFill":false,"style":{"spacing":{"margin":{"top":"var:preset|spacing|50","bottom":"0"}}}} -->
-<div
-  class="wp-block-media-text is-stacked-on-mobile"
-  style="
-    margin-top: var(--wp--preset--spacing--50);
-    margin-bottom: 0;
-    grid-template-columns: 49% auto;
-  "
->
-  <figure class="wp-block-media-text__media">
-    <img
-      src="http://localhost/school-site/wp-content/uploads/2025/03/moren-hsu-VLaKsTkmVhk-unsplash-1024x768.jpg"
-      alt=""
-      class="wp-image-53 size-large"
-    />
-  </figure>
-  <div class="wp-block-media-text__content">
-    <!-- wp:heading -->
-    <h2 class="wp-block-heading">Our Campus</h2>
-    <!-- /wp:heading -->
-
-    <!-- wp:paragraph {"placeholder":"Content…"} -->
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum.
-    </p>
-    <!-- /wp:paragraph -->
-  </div>
-</div>
-<!-- /wp:media-text -->
-
 <!-- wp:media-text {"mediaPosition":"right","mediaId":54,"mediaLink":"http://localhost/school-site/?attachment_id=54","mediaType":"image","mediaWidth":51,"mediaSizeSlug":"large","imageFill":false,"style":{"spacing":{"margin":{"top":"0","bottom":"var:preset|spacing|40"}}}} -->
 <div
   class="wp-block-media-text has-media-on-the-right is-stacked-on-mobile"
@@ -147,6 +115,42 @@
       class="wp-image-54 size-large"
     />
   </figure>
+</div>
+<!-- /wp:media-text -->
+
+<!-- wp:media-text {"mediaId":53,"mediaLink":"http://localhost/school-site/?attachment_id=53","mediaType":"image","mediaWidth":49,"mediaSizeSlug":"large","imageFill":false,"style":{"spacing":{"margin":{"top":"var:preset|spacing|50","bottom":"0"}}}} -->
+<div
+  class="wp-block-media-text is-stacked-on-mobile"
+  style="
+    margin-top: var(--wp--preset--spacing--50);
+    margin-bottom: 0;
+    grid-template-columns: 49% auto;
+  "
+>
+  <figure class="wp-block-media-text__media">
+    <img
+      src="http://localhost/school-site/wp-content/uploads/2025/03/moren-hsu-VLaKsTkmVhk-unsplash-1024x768.jpg"
+      alt=""
+      class="wp-image-53 size-large"
+    />
+  </figure>
+  <div class="wp-block-media-text__content">
+    <!-- wp:heading -->
+    <h2 class="wp-block-heading">Our Campus</h2>
+    <!-- /wp:heading -->
+
+    <!-- wp:paragraph {"placeholder":"Content…"} -->
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+      est laborum.
+    </p>
+    <!-- /wp:paragraph -->
+  </div>
 </div>
 <!-- /wp:media-text -->
 
