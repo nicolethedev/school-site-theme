@@ -28,3 +28,7 @@ Tags:
 *:first-child + html .clearfix {
   zoom: 1;
 } /* IE7 */
+
+.custom-crisp-shadow {
+  filter: drop-shadow(5px 5px 0 #a9362f);
+}
