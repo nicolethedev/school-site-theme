@@ -30,9 +30,9 @@
     class="wp-block-column"
     style="padding-top: var(--wp--preset--spacing--40)"
   >
-    <!-- wp:heading {"textAlign":"center","style":{"spacing":{"padding":{"top":"0","bottom":"0"}}}} -->
+    <!-- wp:heading {"textAlign":"center","style":{"spacing":{"padding":{"top":"0","bottom":"0"}},"elements":{"link":{"color":{"text":"var:preset|color|sandy-sand"}}}},"textColor":"sandy-sand"} -->
     <h2
-      class="wp-block-heading has-text-align-center"
+      class="wp-block-heading has-text-align-center has-sandy-sand-color has-text-color has-link-color"
       style="padding-top: 0; padding-bottom: 0"
     >
       Links
@@ -40,19 +40,38 @@
     <!-- /wp:heading -->
 
     <!-- wp:paragraph {"align":"center"} -->
-    <p class="has-text-align-center">Home</p>
+    <p class="has-text-align-center">
+      <a
+        href="https://nicolelogan.dev/school-site/"
+        data-type="page"
+        data-id="22"
+        >Home</a
+      >
+    </p>
     <!-- /wp:paragraph -->
 
     <!-- wp:paragraph {"align":"center"} -->
-    <p class="has-text-align-center">Privacy Policy</p>
+    <p class="has-text-align-center">
+      <a
+        href="https://nicolelogan.dev/school-site/privacy-policy/"
+        data-type="page"
+        data-id="3"
+        >Privacy Policy</a
+      >
+    </p>
     <!-- /wp:paragraph -->
+
+    <!-- wp:spacer {"height":"14px"} -->
+    <div style="height: 14px" aria-hidden="true" class="wp-block-spacer"></div>
+    <!-- /wp:spacer -->
 
     <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
     <div class="wp-block-buttons">
-      <!-- wp:button {"textColor":"cobalt-blue","width":75,"style":{"elements":{"link":{"color":{"text":"var:preset|color|cobalt-blue"}}}}} -->
+      <!-- wp:button {"textColor":"sandy-sand","width":75,"style":{"elements":{"link":{"color":{"text":"var:preset|color|sandy-sand"}}}}} -->
       <div class="wp-block-button has-custom-width wp-block-button__width-75">
         <a
-          class="wp-block-button__link has-cobalt-blue-color has-text-color has-link-color wp-element-button"
+          class="wp-block-button__link has-sandy-sand-color has-text-color has-link-color wp-element-button"
+          href="https://nicolelogan.dev/school-site/application/"
           ><strong>Apply Today!</strong></a
         >
       </div>
@@ -71,31 +90,40 @@
       padding-left: 0;
     "
   >
-    <!-- wp:heading {"textAlign":"right"} -->
-    <h2 class="wp-block-heading has-text-align-right">Contact Us</h2>
+    <!-- wp:heading {"textAlign":"right","style":{"elements":{"link":{"color":{"text":"var:preset|color|sandy-sand"}}}},"textColor":"sandy-sand"} -->
+    <h2
+      class="wp-block-heading has-text-align-right has-sandy-sand-color has-text-color has-link-color"
+    >
+      Contact Us
+    </h2>
     <!-- /wp:heading -->
 
     <!-- wp:paragraph {"align":"right"} -->
-    <p class="has-text-align-right">info@samplesite.ca</p>
+    <p class="has-text-align-right">
+      <a href="mailto:info@samplesite.ca">info@samplesite.ca</a>
+    </p>
     <!-- /wp:paragraph -->
 
     <!-- wp:paragraph {"align":"right"} -->
-    <p class="has-text-align-right">555.555.5555</p>
+    <p class="has-text-align-right">
+      <a href="tel:5555555555">555.555.5555</a>
+    </p>
     <!-- /wp:paragraph -->
   </div>
   <!-- /wp:column -->
 </div>
 <!-- /wp:columns -->
 
-<!-- wp:group {"style":{"spacing":{"padding":{"top":"32px","bottom":"30px","right":"0"},"margin":{"top":"0","bottom":"0"}},"elements":{"link":{"color":{"text":"var:preset|color|sandy-sand"}}}},"backgroundColor":"cobalt-blue","textColor":"sandy-sand"} -->
+<!-- wp:group {"style":{"spacing":{"padding":{"top":"0px","bottom":"10px","right":"0","left":"0"},"margin":{"top":"0","bottom":"0"}},"elements":{"link":{"color":{"text":"var:preset|color|sandy-sand"}}}},"backgroundColor":"cobalt-blue","textColor":"sandy-sand"} -->
 <div
   class="wp-block-group has-sandy-sand-color has-cobalt-blue-background-color has-text-color has-background has-link-color"
   style="
     margin-top: 0;
     margin-bottom: 0;
-    padding-top: 32px;
+    padding-top: 0px;
     padding-right: 0;
-    padding-bottom: 30px;
+    padding-bottom: 10px;
+    padding-left: 0;
   "
 >
   <!-- wp:paragraph {"align":"center","fontSize":"small"} -->

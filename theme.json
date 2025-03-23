@@ -180,8 +180,8 @@
     "blocks": {
         "core/button": {
             "color": {
-                "background": "var(--wp--preset--color--bright-coral)",
-                "text": "var(--wp--preset--color--cobalt-blue)"
+                "background": "var(--wp--preset--color--red-red-wine)",
+                "text": "var(--wp--preset--color--sandy-sand)"
             },
             "typography": {
                 "fontFamily": "var(--wp--preset--font-family--open-sans)",
