@@ -40,7 +40,21 @@
     }
     add_filter('enter_title_here', 'change_student_title_placeholder');
     
-    
+
+    function add_student_image_sizes() {
+    add_image_size('student-thumbnail', 300, 300, true);
+    add_image_size('student-featured', 600, 400, true);
+}
+add_action('after_setup_theme', 'add_student_image_sizes');
+
+function add_student_image_sizes_to_dropdown($sizes) {
+    return array_merge($sizes, array(
+        'student-thumbnail' => __('Student Thumbnail'),
+        'student-featured' => __('Student Featured')
+    ));
+}
+add_filter('image_size_names_choose', 'add_student_image_sizes_to_dropdown');
+
 
 
 

@@ -1,26 +1,25 @@
 <?php
-
 /*
-    * Plugin Name: Student Taxonomy
-    * Description: A taxonomy for students on the school site.
-    * Version: 1.0
-    * Author: Nicole + Stephanie
-    * Author URI: nicolelogan.dev
+* Plugin Name: Student Grade Level Taxonomy
+* Description: A taxonomy for student grade levels on the school site.
+* Version: 1.0
+* Author: Nicole + Stephanie
+* Author URI: nicolelogan.dev
 */
 
-function student_taxonomy() {
+function student_grade_level_taxonomy() {
      $labels = array(
          'name'              => _x( 'Students Grade Level', 'taxonomy general name' ),
          'singular_name'     => _x( 'Student Grade Level', 'taxonomy singular name' ),
-         'search_items'      => __( 'Search Students' ),
-         'all_items'         => __( 'All Students' ),
-         'parent_item'       => __( 'Parent Student' ),
-         'parent_item_colon' => __( 'Parent Student:' ),
-         'edit_item'         => __( 'Edit Student' ),
-         'update_item'       => __( 'Update Student' ),
-         'add_new_item'      => __( 'Add New Student' ),
-         'new_item_name'     => __( 'New Student' ),
-         'menu_name'         => __( 'Student' ),
+         'search_items'      => __( 'Search Grade Levels' ),
+         'all_items'         => __( 'All Grade Levels' ),
+         'parent_item'       => __( 'Parent Grade Level' ),
+         'parent_item_colon' => __( 'Parent Grade Level:' ),
+         'edit_item'         => __( 'Edit Grade Level' ),
+         'update_item'       => __( 'Update Grade Level' ),
+         'add_new_item'      => __( 'Add New Grade Level' ),
+         'new_item_name'     => __( 'New Grade Level' ),
+         'menu_name'         => __( 'Grade Levels' ),
      );
      $args   = array(
          'hierarchical'      => true, 
@@ -28,14 +27,14 @@ function student_taxonomy() {
          'show_ui'           => true,
          'show_admin_column' => true,
          'query_var'         => true,
-         'rewrite'           => [ 'slug' => 'student' ],
+         'rewrite'           => [ 'slug' => 'student-grade-level' ],
          'show_in_rest'      => true,
      );
-     register_taxonomy( 'student', [ 'fwd-student' ], $args );
+     register_taxonomy( 'student-grade-level', [ 'fwd-student' ], $args );
 }
-add_action( 'init', 'student_taxonomy' );
+add_action( 'init', 'student_grade_level_taxonomy' );
 
-function create_student_taxonomy_terms() {
+function create_student_grade_level_terms() {
     $terms = array(
         'Freshman' => array(
             'description' => 'Students in their first year of high school',
@@ -56,9 +55,9 @@ function create_student_taxonomy_terms() {
     );
 
     foreach ($terms as $term_name => $term_args) {
-        if (!term_exists($term_name, 'fwd-student')) {
-            wp_insert_term($term_name, 'fwd-student', $term_args);
+        if (!term_exists($term_name, 'student-grade-level')) {
+            wp_insert_term($term_name, 'student-grade-level', $term_args);
         }
     }
 }
-add_action( 'init', 'create_student_taxonomy_terms' );
+add_action( 'init', 'create_student_grade_level_terms' );
