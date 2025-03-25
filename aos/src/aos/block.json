@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "fwd-blocks/aos",
+	"version": "0.1.0",
+	"title": "Animate on Scroll",
+	"category": "design",
+	"icon": "smiley",
+	"description": "Animate on scroll",
+	"example": {},
+	"supports": {
+		"html": false,
+		"align": true
+	},
+	"attributes": {
+		"aosAnimation": {
+			"type": "string",
+			"default": "fade-up"
+		}
+	},
+	"textdomain": "aos",
+	"editorScript": "file:./index.js"
+}
