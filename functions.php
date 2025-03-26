@@ -52,6 +52,22 @@ function school_site_enqueues() {
         '2.7.1'
     );
 
+    wp_enqueue_script(
+        'lightgallery-js',
+        'https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/2.7.1/lightgallery.min.js',
+        array('jquery'), 
+        '2.7.1',
+        true
+    );
+
+    wp_enqueue_script(
+        'lightgallery-init',
+        get_template_directory_uri() . '/js/lightgallery-init.js',
+        array('jquery', 'lightgallery-js', 'lightgallery-zoom', 'lightgallery-thumbnail'),
+        false, 
+        true
+    );
+
 }
 add_action('wp_enqueue_scripts', 'school_site_enqueues');
 
