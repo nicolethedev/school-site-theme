@@ -1,15 +1,43 @@
 <!-- wp:template-part {"slug":"header","theme":"school-site-theme","tagName":"header"} /-->
 
-<!-- wp:query-title {"type":"archive","style":{"spacing":{"margin":{"right":"var:preset|spacing|60","left":"var:preset|spacing|60"}}}} /-->
+<!-- wp:paragraph {"align":"center","metadata":{"categories":["banner"],"patternName":"core/block/105","name":"Banner"},"style":{"elements":{"link":{"color":{"text":"var:preset|color|cobalt-blue"}}},"spacing":{"padding":{"top":"var:preset|spacing|20","bottom":"var:preset|spacing|20"},"margin":{"top":"0","bottom":"0"}},"border":{"width":"0px","style":"none"}},"backgroundColor":"bright-coral","textColor":"cobalt-blue"} -->
+<p
+  class="has-text-align-center has-cobalt-blue-color has-bright-coral-background-color has-text-color has-background has-link-color"
+  style="
+    border-style: none;
+    border-width: 0px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: var(--wp--preset--spacing--20);
+    padding-bottom: var(--wp--preset--spacing--20);
+  "
+>
+  <strong>Vote for your Class President by May 10, 2025!</strong>
+</p>
+<!-- /wp:paragraph -->
 
-<!-- wp:query {"queryId":9,"query":{"perPage":100,"pages":0,"offset":0,"postType":"post","order":"asc","orderBy":"title","author":"","search":"","exclude":[],"sticky":"exclude","inherit":false},"layout":{"type":"constrained"}} -->
+<!-- wp:query-title {"type":"archive","showPrefix":false,"style":{"spacing":{"margin":{"right":"var:preset|spacing|60","left":"var:preset|spacing|60"}}}} /-->
+
+<!-- wp:query {"queryId":9,"query":{"perPage":100,"pages":0,"offset":0,"postType":"fwd-student","order":"asc","orderBy":"title","author":"","search":"","exclude":[],"sticky":"exclude","inherit":false,"taxQuery":{"student-grade-level":[8]}},"layout":{"type":"constrained"}} -->
 <div class="wp-block-query">
-  <!-- wp:post-template {"layout":{"type":"grid","columnCount":2}} -->
-  <!-- wp:post-featured-image {"isLink":true,"aspectRatio":"3/2","sizeSlug":"student-featured"} /-->
+  <!-- wp:heading -->
+  <h2 class="wp-block-heading">Freshman</h2>
+  <!-- /wp:heading -->
+
+  <!-- wp:post-template {"style":{"spacing":{"blockGap":"var:preset|spacing|60"}},"layout":{"type":"grid","columnCount":2,"minimumColumnWidth":null}} -->
+  <!-- wp:post-featured-image {"isLink":true,"aspectRatio":"3/4","sizeSlug":"large"} /-->
 
   <!-- wp:post-title {"textAlign":"center","isLink":true,"style":{"spacing":{"padding":{"top":"0","bottom":"0"},"margin":{"top":"0","bottom":"var:preset|spacing|20"}}}} /-->
 
-  <!-- wp:post-terms {"term":"student-grade-level","textAlign":"center"} /-->
+  <!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"center"}} -->
+  <div class="wp-block-group">
+    <!-- wp:paragraph -->
+    <p>Grade:</p>
+    <!-- /wp:paragraph -->
+
+    <!-- wp:post-terms {"term":"student-grade-level","textAlign":"center"} /-->
+  </div>
+  <!-- /wp:group -->
 
   <!-- wp:spacer {"height":"65px"} -->
   <div style="height: 65px" aria-hidden="true" class="wp-block-spacer"></div>
@@ -17,5 +45,127 @@
   <!-- /wp:post-template -->
 </div>
 <!-- /wp:query -->
+
+<!-- wp:query {"queryId":9,"query":{"perPage":100,"pages":0,"offset":0,"postType":"fwd-student","order":"asc","orderBy":"title","author":"","search":"","exclude":[],"sticky":"exclude","inherit":false,"taxQuery":{"student-grade-level":[9]}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-query">
+  <!-- wp:heading -->
+  <h2 class="wp-block-heading">Sophomore</h2>
+  <!-- /wp:heading -->
+
+  <!-- wp:post-template {"style":{"spacing":{"blockGap":"var:preset|spacing|60"}},"layout":{"type":"grid","columnCount":null,"minimumColumnWidth":"20rem"}} -->
+  <!-- wp:post-featured-image {"isLink":true,"aspectRatio":"3/4","sizeSlug":"large"} /-->
+
+  <!-- wp:post-title {"textAlign":"center","isLink":true,"style":{"spacing":{"padding":{"top":"0","bottom":"0"},"margin":{"top":"0","bottom":"var:preset|spacing|20"}}}} /-->
+
+  <!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"center"}} -->
+  <div class="wp-block-group">
+    <!-- wp:paragraph -->
+    <p>Grade:</p>
+    <!-- /wp:paragraph -->
+
+    <!-- wp:post-terms {"term":"student-grade-level","textAlign":"center"} /-->
+  </div>
+  <!-- /wp:group -->
+
+  <!-- wp:spacer {"height":"65px"} -->
+  <div style="height: 65px" aria-hidden="true" class="wp-block-spacer"></div>
+  <!-- /wp:spacer -->
+  <!-- /wp:post-template -->
+</div>
+<!-- /wp:query -->
+
+<!-- wp:query {"queryId":9,"query":{"perPage":100,"pages":0,"offset":0,"postType":"fwd-student","order":"asc","orderBy":"title","author":"","search":"","exclude":[],"sticky":"exclude","inherit":false,"taxQuery":{"student-grade-level":[10]}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-query">
+  <!-- wp:heading -->
+  <h2 class="wp-block-heading">Junior</h2>
+  <!-- /wp:heading -->
+
+  <!-- wp:post-template {"style":{"spacing":{"blockGap":"var:preset|spacing|60"}},"layout":{"type":"grid","columnCount":2,"minimumColumnWidth":null}} -->
+  <!-- wp:post-featured-image {"isLink":true,"aspectRatio":"3/4","sizeSlug":"large"} /-->
+
+  <!-- wp:post-title {"textAlign":"center","isLink":true,"style":{"spacing":{"padding":{"top":"0","bottom":"0"},"margin":{"top":"0","bottom":"var:preset|spacing|20"}}}} /-->
+
+  <!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"center"}} -->
+  <div class="wp-block-group">
+    <!-- wp:paragraph -->
+    <p>Grade:</p>
+    <!-- /wp:paragraph -->
+
+    <!-- wp:post-terms {"term":"student-grade-level","textAlign":"center"} /-->
+  </div>
+  <!-- /wp:group -->
+
+  <!-- wp:spacer {"height":"65px"} -->
+  <div style="height: 65px" aria-hidden="true" class="wp-block-spacer"></div>
+  <!-- /wp:spacer -->
+  <!-- /wp:post-template -->
+</div>
+<!-- /wp:query -->
+
+<!-- wp:query {"queryId":9,"query":{"perPage":100,"pages":0,"offset":0,"postType":"fwd-student","order":"asc","orderBy":"title","author":"","search":"","exclude":[],"sticky":"exclude","inherit":false,"taxQuery":{"student-grade-level":[11]}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-query">
+  <!-- wp:heading -->
+  <h2 class="wp-block-heading">Senior</h2>
+  <!-- /wp:heading -->
+
+  <!-- wp:post-template {"style":{"spacing":{"blockGap":"var:preset|spacing|60"}},"layout":{"type":"grid","columnCount":2,"minimumColumnWidth":null}} -->
+  <!-- wp:post-featured-image {"isLink":true,"aspectRatio":"3/4","sizeSlug":"large"} /-->
+
+  <!-- wp:post-title {"textAlign":"center","isLink":true,"style":{"spacing":{"padding":{"top":"0","bottom":"0"},"margin":{"top":"0","bottom":"var:preset|spacing|20"}}}} /-->
+
+  <!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"center"}} -->
+  <div class="wp-block-group">
+    <!-- wp:paragraph -->
+    <p>Grade:</p>
+    <!-- /wp:paragraph -->
+
+    <!-- wp:post-terms {"term":"student-grade-level","textAlign":"center"} /-->
+  </div>
+  <!-- /wp:group -->
+
+  <!-- wp:spacer {"height":"65px"} -->
+  <div style="height: 65px" aria-hidden="true" class="wp-block-spacer"></div>
+  <!-- /wp:spacer -->
+  <!-- /wp:post-template -->
+</div>
+<!-- /wp:query -->
+
+<!-- wp:cover {"url":"https://nicolelogan.dev/school-site/wp-content/uploads/2025/03/kenny-eliason-1-aA2Fadydc-unsplash.jpg","id":148,"alt":"more students in class","dimRatio":70,"overlayColor":"cobalt-blue","isUserOverlayColor":true,"focalPoint":{"x":0.5,"y":0.65},"minHeight":489,"minHeightUnit":"px","layout":{"type":"constrained"}} -->
+<div class="wp-block-cover" style="min-height: 489px">
+  <span
+    aria-hidden="true"
+    class="wp-block-cover__background has-cobalt-blue-background-color has-background-dim-70 has-background-dim"
+  ></span
+  ><img
+    class="wp-block-cover__image-background wp-image-148"
+    alt="more students in class"
+    src="https://nicolelogan.dev/school-site/wp-content/uploads/2025/03/kenny-eliason-1-aA2Fadydc-unsplash.jpg"
+    style="object-position: 50% 65%"
+    data-object-fit="cover"
+    data-object-position="50% 65%"
+  />
+  <div class="wp-block-cover__inner-container">
+    <!-- wp:heading {"textAlign":"left","style":{"elements":{"link":{"color":{"text":"var:preset|color|sandy-sand"}}}},"textColor":"sandy-sand","fontSize":"x-large"} -->
+    <h2
+      class="wp-block-heading has-text-align-left has-sandy-sand-color has-text-color has-link-color has-x-large-font-size"
+    >
+      <strong>Start chasing your dreams today</strong>!
+    </h2>
+    <!-- /wp:heading -->
+
+    <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
+    <div class="wp-block-buttons">
+      <!-- wp:button -->
+      <div class="wp-block-button">
+        <a class="wp-block-button__link wp-element-button"
+          ><strong>Apply for the '25-'26 School Year</strong></a
+        >
+      </div>
+      <!-- /wp:button -->
+    </div>
+    <!-- /wp:buttons -->
+  </div>
+</div>
+<!-- /wp:cover -->
 
 <!-- wp:template-part {"slug":"footer","theme":"school-site-theme","tagName":"footer"} /-->
