@@ -10,15 +10,15 @@
 function staff_taxonomy() {
     $labels = array(
         'name'              => _x( 'Staff Type', 'taxonomy general name' ),
-        'search_items'      => __( 'Search Staff Groups' ),
-        'all_items'         => __( 'All Staff Groups' ),
-        'parent_item'       => __( 'Parent Group' ),
-        'parent_item_colon' => __( 'Parent Group:' ),
-        'edit_item'         => __( 'Edit Group' ),
-        'update_item'       => __( 'Update Group' ),
-        'add_new_item'      => __( 'Add New Staff Group' ),
-        'new_item_name'     => __( 'New Staff Group' ),
-        'menu_name'         => __( 'Staff Groups' ),
+        'search_items'      => __( 'Search Staff Types' ),
+        'all_items'         => __( 'All Staff Types' ),
+        'parent_item'       => __( 'Parent Type' ),
+        'parent_item_colon' => __( 'Parent Type:' ),
+        'edit_item'         => __( 'Edit Type' ),
+        'update_item'       => __( 'Update Type' ),
+        'add_new_item'      => __( 'Add New Staff Type' ),
+        'new_item_name'     => __( 'New Staff Type' ),
+        'menu_name'         => __( 'Staff Types' ),
     );
 
     $args = array(
@@ -27,16 +27,11 @@ function staff_taxonomy() {
         'show_ui'           => true,
         'show_admin_column' => true,
         'query_var'         => true,
-        'rewrite'           => ['slug' => 'staff-group'],
-        'capabilities'      => array(
-            'manage_terms'  => 'nobody_can', 
-            'edit_terms'    => 'nobody_can', 
-            'delete_terms'  => 'nobody_can', 
-            'assign_terms'  => 'edit_posts' 
-        )
+        'rewrite'           => ['slug' => 'staff-type'],
+        'show_in_rest'      => true,
     );
     
-    register_taxonomy( 'staff_group', ['fwd-staff'], $args );
+    register_taxonomy( 'staff-type', ['fwd-staff'], $args );
 }
 add_action( 'init', 'staff_taxonomy' );
 
