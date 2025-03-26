@@ -27,14 +27,11 @@ document.addEventListener("DOMContentLoaded", function () {
       download: false,
       closable: true,
       closeOnTap: true,
-      escKey: true,
       controls: true,
       counter: true,
+      escKey: true,
       getCaptionFromTitleOrAlt: true,
       showCloseIcon: true,
-      enableSwipe: true,
-      enableDrag: true,
-      speed: 500,
     });
   }
 });
