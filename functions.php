@@ -14,65 +14,56 @@ function school_site_enqueues() {
         array(), 
         '12.1.0'
     );
-
-    wp_enqueue_script(
-        'lightgallery-zoom', 
-        'https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/2.7.1/plugins/zoom/lg-zoom.min.js', 
-        array('lightgallery-js'), 
-        '2.7.1', 
-        true
-    );
-
-    wp_enqueue_script(
-        'lightgallery-thumbnail', 
-        'https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/2.7.1/plugins/thumbnail/lg-thumbnail.min.js', 
-        array('lightgallery-js'), 
-        '2.7.1', 
-        true
-    );
-
-    wp_enqueue_style(
-        'lightgallery-css', 
-        'https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/2.7.1/css/lightgallery-bundle.min.css', 
-        array(), 
-        '2.7.1'
-    );
-
-    wp_enqueue_style(
-        'lightgallery-zoom-css', 
-        'https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/2.7.1/css/lg-zoom.min.css', 
-        array(), 
-        '2.7.1'
-    );
-
-    wp_enqueue_style(
-        'lightgallery-thumbnail-css',
-        'https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/2.7.1/css/lg-thumbnail.min.css', 
-        array(), 
-        '2.7.1'
-    );
-
-    wp_enqueue_script(
-        'lightgallery-js',
-        'https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/2.7.1/lightgallery.min.js',
-        array('jquery'), 
-        '2.7.1',
-        true
-    );
-
-    wp_enqueue_script(
-        'lightgallery-init',
-        get_template_directory_uri() . '/js/lightgallery-init.js',
-        array('jquery', 'lightgallery-js', 'lightgallery-zoom', 'lightgallery-thumbnail'),
-        false, 
-        true
-    );
-
 }
 add_action('wp_enqueue_scripts', 'school_site_enqueues');
 
+function enqueue_lightgallery_on_homepage() {
+    if (is_front_page()) {
+
+        wp_enqueue_style(
+            'lightgallery-css',
+            get_template_directory_uri() . '/assets/lightgallery/lightgallery-bundle.min.css', 
+            array(),
+            '2.7.1'
+        );
+
+        wp_enqueue_script(
+            'lightgallery-js',
+            get_template_directory_uri() . '/assets/lightgallery/lightgallery.umd.js', 
+            array('jquery'), 
+            '2.7.1',
+            true
+        );
+
+        wp_enqueue_script(
+            'lightgallery-zoom',
+            get_template_directory_uri() . '/assets/lightgallery/lg-zoom.min.js', 
+            array('lightgallery-js'), 
+            '2.7.1', 
+            true
+        );
+
+        wp_enqueue_script(
+            'lightgallery-thumbnail',
+            get_template_directory_uri() . '/assets/lightgallery/lg-thumbnail.min.js', 
+            array('lightgallery-js'), 
+            '2.7.1', 
+            true
+        );
+
+        wp_enqueue_script(
+            'lightgallery-init',
+            get_template_directory_uri() . '/assets/js/lightgallery-init.js', 
+            array('jquery', 'lightgallery-js', 'lightgallery-zoom', 'lightgallery-thumbnail'),
+            false, 
+            true
+        );
+    }
+}
+
+
 function school_site_setup() {
-    add_editor_style( get_stylesheet_uri() );
+    add_editor_style(get_stylesheet_uri());
     add_theme_support('post-thumbnails');
     add_image_size('student-thumbnail', 300, 300, true);
     add_image_size('student-featured', 600, 400, true);
@@ -98,12 +89,6 @@ function change_custom_post_type_title_placeholder($title) {
 }
 add_filter('enter_title_here', 'change_custom_post_type_title_placeholder');
 
-function enqueue_lightgallery_on_homepage() {
-    if (is_front_page()) {
-    }
-}
-add_action('wp_enqueue_scripts', 'enqueue_lightgallery_on_homepage');
-
 function enqueue_aos_files() {
     wp_enqueue_script( 'aos-js', 'https://unpkg.com/aos@2.3.1/dist/aos.js', array(), '2.3.1', array( 'strategy' => 'defer' ) );
     wp_enqueue_script( 'aos-settings',  get_theme_file_uri( 'assets/js/aos-settings.js'), array('aos-js'), '2.3.1', array( 'strategy' => 'defer' ) );
@@ -111,11 +96,8 @@ function enqueue_aos_files() {
 }
 add_action('wp_enqueue_scripts', 'enqueue_aos_files');
 
-
-
 require get_template_directory() . '/inc/student-taxonomies.php';
 require get_template_directory() . '/inc/student-post-type.php';
 require get_template_directory() . '/inc/staff-taxonomies.php';
 require get_template_directory() . '/inc/staff-post-type.php';
-
-require get_theme_file_path( '/aos/aos.php' );
+require get_theme_file_path('/aos/aos.php');
