@@ -45,9 +45,9 @@
 </div>
 <!-- /wp:cover -->
 
-<!-- wp:columns {"style":{"spacing":{"padding":{"right":"var:preset|spacing|60","left":"var:preset|spacing|60","top":"var:preset|spacing|40","bottom":"var:preset|spacing|40"},"blockGap":{"top":"0","left":"0"},"margin":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60"}}}} -->
+<!-- wp:columns {"verticalAlignment":"center","style":{"spacing":{"padding":{"right":"var:preset|spacing|60","left":"var:preset|spacing|60","top":"var:preset|spacing|40","bottom":"var:preset|spacing|40"},"blockGap":{"top":"0","left":"0"},"margin":{"top":"var:preset|spacing|60","bottom":"var:preset|spacing|60"}}}} -->
 <div
-  class="wp-block-columns"
+  class="wp-block-columns are-vertically-aligned-center"
   style="
     margin-top: var(--wp--preset--spacing--60);
     margin-bottom: var(--wp--preset--spacing--60);
@@ -57,30 +57,31 @@
     padding-left: var(--wp--preset--spacing--60);
   "
 >
-  <!-- wp:column -->
-  <div class="wp-block-column">
-    <!-- wp:heading -->
-    <h2 class="wp-block-heading">Achieve Greatness</h2>
+  <!-- wp:column {"verticalAlignment":"center"} -->
+  <div class="wp-block-column is-vertically-aligned-center">
+    <!-- wp:heading {"textAlign":"center"} -->
+    <h2 class="wp-block-heading has-text-align-center">Achieve Greatness</h2>
     <!-- /wp:heading -->
   </div>
   <!-- /wp:column -->
 
-  <!-- wp:column {"width":"40%"} -->
-  <div class="wp-block-column" style="flex-basis: 40%">
+  <!-- wp:column {"verticalAlignment":"center","width":"35%"} -->
+  <div
+    class="wp-block-column is-vertically-aligned-center"
+    style="flex-basis: 35%"
+  >
     <!-- wp:paragraph {"align":"left"} -->
     <p class="has-text-align-left">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-      commodo consequat.
+      tempor incididunt ut labore et dolore magna aliqua.
     </p>
     <!-- /wp:paragraph -->
   </div>
   <!-- /wp:column -->
 
-  <!-- wp:column -->
-  <div class="wp-block-column">
-    <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"right"}} -->
+  <!-- wp:column {"verticalAlignment":"center"} -->
+  <div class="wp-block-column is-vertically-aligned-center">
+    <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
     <div class="wp-block-buttons">
       <!-- wp:button {"width":75} -->
       <div class="wp-block-button has-custom-width wp-block-button__width-75">
@@ -212,9 +213,10 @@
 </div>
 <!-- /wp:cover -->
 
-<!-- wp:gallery {"columns":5,"randomOrder":true,"linkTo":"none","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|20","left":"var:preset|spacing|20"},"padding":{"right":"var:preset|spacing|50","left":"var:preset|spacing|50","top":"var:preset|spacing|50","bottom":"var:preset|spacing|50"},"margin":{"top":"0","bottom":"0"}}},"backgroundColor":"red-red-wine"} -->
+<!-- wp:gallery {"columns":5,"randomOrder":true,"linkTo":"media","style":{"spacing":{"blockGap":{"top":"var:preset|spacing|20","left":"var:preset|spacing|20"},"padding":{"right":"var:preset|spacing|50","left":"var:preset|spacing|50","top":"var:preset|spacing|50","bottom":"var:preset|spacing|50"},"margin":{"top":"0","bottom":"0"}}},"backgroundColor":"red-red-wine"} -->
 <figure
   class="wp-block-gallery has-nested-images columns-5 is-cropped has-red-red-wine-background-color has-background"
+  id="my-gallery"
   style="
     margin-top: 0;
     margin-bottom: 0;
@@ -224,93 +226,111 @@
     padding-left: var(--wp--preset--spacing--50);
   "
 >
-  <!-- wp:image {"id":145,"sizeSlug":"large","linkDestination":"none"} -->
+  <!-- wp:image {"id":145,"sizeSlug":"large","linkDestination":"media"} -->
   <figure class="wp-block-image size-large">
-    <img
-      src="https://nicolelogan.dev/school-site/wp-content/uploads/2025/03/caleb-woods-RIcMwDLk1wo-unsplash-1024x576.jpg"
-      alt=""
-      class="wp-image-145"
-    />
+    <a
+      href="https://nicolelogan.dev/school-site/wp-content/uploads/2025/03/caleb-woods-RIcMwDLk1wo-unsplash.jpg"
+      ><img
+        src="https://nicolelogan.dev/school-site/wp-content/uploads/2025/03/caleb-woods-RIcMwDLk1wo-unsplash-1024x576.jpg"
+        alt=""
+        class="wp-image-145"
+    /></a>
   </figure>
   <!-- /wp:image -->
 
-  <!-- wp:image {"id":154,"sizeSlug":"large","linkDestination":"none"} -->
+  <!-- wp:image {"id":154,"sizeSlug":"large","linkDestination":"media"} -->
   <figure class="wp-block-image size-large">
-    <img
-      src="https://nicolelogan.dev/school-site/wp-content/uploads/2025/03/van-tay-media-pc_HmXZ0e_w-unsplash-1024x683.jpg"
-      alt=""
-      class="wp-image-154"
-    />
+    <a
+      href="https://nicolelogan.dev/school-site/wp-content/uploads/2025/03/van-tay-media-pc_HmXZ0e_w-unsplash.jpg"
+      ><img
+        src="https://nicolelogan.dev/school-site/wp-content/uploads/2025/03/van-tay-media-pc_HmXZ0e_w-unsplash-1024x683.jpg"
+        alt=""
+        class="wp-image-154"
+    /></a>
   </figure>
   <!-- /wp:image -->
 
-  <!-- wp:image {"id":146,"sizeSlug":"large","linkDestination":"none"} -->
+  <!-- wp:image {"id":146,"sizeSlug":"large","linkDestination":"media"} -->
   <figure class="wp-block-image size-large">
-    <img
-      src="https://nicolelogan.dev/school-site/wp-content/uploads/2025/03/linkedin-sales-solutions-NpyF7rjqmq4-unsplash-1024x683.jpg"
-      alt=""
-      class="wp-image-146"
-    />
+    <a
+      href="https://nicolelogan.dev/school-site/wp-content/uploads/2025/03/linkedin-sales-solutions-NpyF7rjqmq4-unsplash.jpg"
+      ><img
+        src="https://nicolelogan.dev/school-site/wp-content/uploads/2025/03/linkedin-sales-solutions-NpyF7rjqmq4-unsplash-1024x683.jpg"
+        alt=""
+        class="wp-image-146"
+    /></a>
   </figure>
   <!-- /wp:image -->
 
-  <!-- wp:image {"id":151,"sizeSlug":"large","linkDestination":"none"} -->
+  <!-- wp:image {"id":151,"sizeSlug":"large","linkDestination":"media"} -->
   <figure class="wp-block-image size-large">
-    <img
-      src="https://nicolelogan.dev/school-site/wp-content/uploads/2025/03/susan-q-yin-2JIvboGLeho-unsplash-1024x683.jpg"
-      alt=""
-      class="wp-image-151"
-    />
+    <a
+      href="https://nicolelogan.dev/school-site/wp-content/uploads/2025/03/susan-q-yin-2JIvboGLeho-unsplash.jpg"
+      ><img
+        src="https://nicolelogan.dev/school-site/wp-content/uploads/2025/03/susan-q-yin-2JIvboGLeho-unsplash-1024x683.jpg"
+        alt=""
+        class="wp-image-151"
+    /></a>
   </figure>
   <!-- /wp:image -->
 
-  <!-- wp:image {"id":152,"sizeSlug":"large","linkDestination":"none"} -->
+  <!-- wp:image {"id":152,"sizeSlug":"large","linkDestination":"media"} -->
   <figure class="wp-block-image size-large">
-    <img
-      src="https://nicolelogan.dev/school-site/wp-content/uploads/2025/03/annie-spratt-4A1pj4_vClA-unsplash-1024x683.jpg"
-      alt=""
-      class="wp-image-152"
-    />
+    <a
+      href="https://nicolelogan.dev/school-site/wp-content/uploads/2025/03/annie-spratt-4A1pj4_vClA-unsplash.jpg"
+      ><img
+        src="https://nicolelogan.dev/school-site/wp-content/uploads/2025/03/annie-spratt-4A1pj4_vClA-unsplash-1024x683.jpg"
+        alt=""
+        class="wp-image-152"
+    /></a>
   </figure>
   <!-- /wp:image -->
 
-  <!-- wp:image {"id":153,"sizeSlug":"large","linkDestination":"none"} -->
+  <!-- wp:image {"id":153,"sizeSlug":"large","linkDestination":"media"} -->
   <figure class="wp-block-image size-large">
-    <img
-      src="https://nicolelogan.dev/school-site/wp-content/uploads/2025/03/dom-fou-YRMWVcdyhmI-unsplash-1024x768.jpg"
-      alt=""
-      class="wp-image-153"
-    />
+    <a
+      href="https://nicolelogan.dev/school-site/wp-content/uploads/2025/03/dom-fou-YRMWVcdyhmI-unsplash.jpg"
+      ><img
+        src="https://nicolelogan.dev/school-site/wp-content/uploads/2025/03/dom-fou-YRMWVcdyhmI-unsplash-1024x768.jpg"
+        alt=""
+        class="wp-image-153"
+    /></a>
   </figure>
   <!-- /wp:image -->
 
-  <!-- wp:image {"id":150,"sizeSlug":"large","linkDestination":"none"} -->
+  <!-- wp:image {"id":150,"sizeSlug":"large","linkDestination":"media"} -->
   <figure class="wp-block-image size-large">
-    <img
-      src="https://nicolelogan.dev/school-site/wp-content/uploads/2025/03/brooke-cagle-g1Kr4Ozfoac-unsplash-1024x683.jpg"
-      alt=""
-      class="wp-image-150"
-    />
+    <a
+      href="https://nicolelogan.dev/school-site/wp-content/uploads/2025/03/brooke-cagle-g1Kr4Ozfoac-unsplash.jpg"
+      ><img
+        src="https://nicolelogan.dev/school-site/wp-content/uploads/2025/03/brooke-cagle-g1Kr4Ozfoac-unsplash-1024x683.jpg"
+        alt=""
+        class="wp-image-150"
+    /></a>
   </figure>
   <!-- /wp:image -->
 
-  <!-- wp:image {"id":149,"sizeSlug":"large","linkDestination":"none"} -->
+  <!-- wp:image {"id":149,"sizeSlug":"large","linkDestination":"media"} -->
   <figure class="wp-block-image size-large">
-    <img
-      src="https://nicolelogan.dev/school-site/wp-content/uploads/2025/03/javier-trueba-iQPr1XkF5F0-unsplash-1024x683.jpg"
-      alt=""
-      class="wp-image-149"
-    />
+    <a
+      href="https://nicolelogan.dev/school-site/wp-content/uploads/2025/03/javier-trueba-iQPr1XkF5F0-unsplash.jpg"
+      ><img
+        src="https://nicolelogan.dev/school-site/wp-content/uploads/2025/03/javier-trueba-iQPr1XkF5F0-unsplash-1024x683.jpg"
+        alt=""
+        class="wp-image-149"
+    /></a>
   </figure>
   <!-- /wp:image -->
 
-  <!-- wp:image {"id":156,"sizeSlug":"large","linkDestination":"none"} -->
+  <!-- wp:image {"id":156,"sizeSlug":"large","linkDestination":"media"} -->
   <figure class="wp-block-image size-large">
-    <img
-      src="https://nicolelogan.dev/school-site/wp-content/uploads/2025/03/erika-fletcher-MZxqc6n9qCw-unsplash-1024x684.jpg"
-      alt=""
-      class="wp-image-156"
-    />
+    <a
+      href="https://nicolelogan.dev/school-site/wp-content/uploads/2025/03/erika-fletcher-MZxqc6n9qCw-unsplash.jpg"
+      ><img
+        src="https://nicolelogan.dev/school-site/wp-content/uploads/2025/03/erika-fletcher-MZxqc6n9qCw-unsplash-1024x684.jpg"
+        alt=""
+        class="wp-image-156"
+    /></a>
   </figure>
   <!-- /wp:image -->
 </figure>
