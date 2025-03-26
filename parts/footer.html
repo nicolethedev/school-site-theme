@@ -25,24 +25,14 @@
         padding-left: var(--wp--preset--spacing--40);
       "
     >
-      <!-- wp:site-title {"level":2,"textAlign":"center"} /-->
+      <!-- wp:site-title {"level":3,"textAlign":"center"} /-->
 
-      <!-- wp:paragraph {"align":"center","style":{"spacing":{"padding":{"top":"0","bottom":"0"}}}} -->
-      <p
-        class="has-text-align-center"
-        style="padding-top: 0; padding-bottom: 0"
-      >
-        555 Seymour Street
-      </p>
+      <!-- wp:paragraph {"align":"center"} -->
+      <p class="has-text-align-center">555 Seymour Street</p>
       <!-- /wp:paragraph -->
 
-      <!-- wp:paragraph {"align":"center","style":{"spacing":{"padding":{"top":"0","bottom":"0"}}}} -->
-      <p
-        class="has-text-align-center"
-        style="padding-top: 0; padding-bottom: 0"
-      >
-        Vancouver, BC V6B 3H6
-      </p>
+      <!-- wp:paragraph {"align":"center"} -->
+      <p class="has-text-align-center">Vancouver, BC - Canada</p>
       <!-- /wp:paragraph -->
     </div>
     <!-- /wp:column -->
@@ -52,13 +42,13 @@
       class="wp-block-column"
       style="padding-top: var(--wp--preset--spacing--40)"
     >
-      <!-- wp:heading {"textAlign":"center","style":{"spacing":{"padding":{"top":"0","bottom":"0"}},"elements":{"link":{"color":{"text":"var:preset|color|sandy-sand"}}}},"textColor":"sandy-sand"} -->
-      <h2
+      <!-- wp:heading {"textAlign":"center","level":3,"style":{"spacing":{"padding":{"top":"0","bottom":"0"}},"elements":{"link":{"color":{"text":"var:preset|color|sandy-sand"}}}},"textColor":"sandy-sand"} -->
+      <h3
         class="wp-block-heading has-text-align-center has-sandy-sand-color has-text-color has-link-color"
         style="padding-top: 0; padding-bottom: 0"
       >
         Links
-      </h2>
+      </h3>
       <!-- /wp:heading -->
 
       <!-- wp:paragraph {"align":"center"} -->
@@ -116,12 +106,12 @@
         padding-left: 0;
       "
     >
-      <!-- wp:heading {"textAlign":"center","style":{"elements":{"link":{"color":{"text":"var:preset|color|sandy-sand"}}}},"textColor":"sandy-sand"} -->
-      <h2
+      <!-- wp:heading {"textAlign":"center","level":3,"style":{"elements":{"link":{"color":{"text":"var:preset|color|sandy-sand"}}}},"textColor":"sandy-sand"} -->
+      <h3
         class="wp-block-heading has-text-align-center has-sandy-sand-color has-text-color has-link-color"
       >
         Contact Us
-      </h2>
+      </h3>
       <!-- /wp:heading -->
 
       <!-- wp:paragraph {"align":"center"} -->
@@ -132,7 +122,9 @@
 
       <!-- wp:paragraph {"align":"center"} -->
       <p class="has-text-align-center">
-        <a href="tel:5555555555">555.555.5555</a>
+        <a href="tel:5555555555"
+          ><span style="text-decoration: underline">555.555.5555</span></a
+        >
       </p>
       <!-- /wp:paragraph -->
     </div>
