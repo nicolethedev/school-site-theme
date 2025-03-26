@@ -41,21 +41,21 @@ function staff_taxonomy() {
 add_action( 'init', 'staff_taxonomy' );
 
 function create_staff_terms() {
-    $terms = ['Faculty', 'Administration'];
-    
-    foreach($terms as $term) {
-        if(!term_exists($term, 'staff_group')) {
-            wp_insert_term(
-                $term,
-                'staff_group',
-                array('slug' => sanitize_title($term))
-            );
+    $terms = array(
+        'Faculty' => array(
+            'description' => 'Teachers and other teaching staff',
+            'slug' => 'faculty'
+        ),
+        'Administrative' => array(
+            'description' => 'Administrative staff',
+            'slug' => 'administrative'
+        )
+    );
+
+    foreach ($terms as $term_name => $term_args) {
+        if (!term_exists($term_name, 'staff-type')) {
+            wp_insert_term($term_name, 'staff-type', $term_args);
         }
     }
 }
 add_action( 'init', 'create_staff_terms' );
-
-function remove_taxonomy_management() {
-    remove_menu_page('edit-tags.php?taxonomy=staff_group');
-}
-add_action( 'admin_menu', 'remove_taxonomy_management' );
